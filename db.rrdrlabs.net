@@ -1,0 +1,32 @@
+; Forward data file for rrdrlabs.net zone
+
+$TTL 86400
+
+@ IN SOA srv01.rrdrlabs.net. root.rrdrlabs.net. (
+    2           ; Serial
+    604800      ; Refresh
+    86400       ; Retry
+    2419200     ; Expire
+    86400       ; Negative Cache TTL
+)
+
+        IN  NS      srv01.rrdrlabs.net.
+
+rtr.rrdrlabs.net.      IN  A       192.168.5.1
+rtr.rrdrlabs.net.      IN  AAAA    fd79:7f1a:98a0:7214:5::1
+
+srv01.rrdrlabs.net.    IN  A       192.168.5.11
+srv01.rrdrlabs.net.    IN  AAAA    fd79:7f1a:98a0:7214:5::11
+
+srv02.rrdrlabs.net.    IN  A       192.168.5.12
+srv02.rrdrlabs.net.    IN  AAAA    fd79:7f1a:98a0:7214:5::12
+
+str01.rrdrlabs.net.    IN  A       192.168.5.13
+str01.rrdrlabs.net.    IN  AAAA    fd79:7f1a:98a0:7214:5::13
+
+_kerberos._udp.rrdrlabs.net.        IN  SRV 0   0   88  srv01.rrdrlabs.net.
+_kerberos-master._udp.rrdrlabs.net. IN  SRV 0   0   88  srv01.rrdrlabs.net.
+_kpasswd._udp.rrdrlabs.net.         IN  SRV 0   0   464 srv01.rrdrlabs.net.
+
+_ldap._tcp.rrdrlabs.net.            IN  SRV 0   0   389 srv01.rrdrlabs.net.
+

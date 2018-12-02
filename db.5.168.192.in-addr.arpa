@@ -1,0 +1,19 @@
+; Reverse data file for 192.168.5.0 zone
+
+$TTL    86400
+
+5.168.192.in-addr.arpa.	IN SOA srv01.rrdrlabs.net. root.rrdrlabs.net. (
+    2           ; Serial
+    604800      ; Refresh
+    86400       ; Retry
+    2419200     ; Expire
+    86400       ; Negative Cache TTL
+)
+
+    IN  NS  srv01.rrdrlabs.net.
+
+1   IN  PTR rtr.rrdrlabs.net.
+11  IN  PTR srv01.rrdrlabs.net.
+12  IN  PTR srv02.rrdrlabs.net.
+13  IN  PTR str01.rrdrlabs.net.
+
